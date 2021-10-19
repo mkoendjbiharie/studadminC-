@@ -1,0 +1,300 @@
+<%@ page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*" errorPage="" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Untitled Document</title>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+
+
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_validateForm() { //v4.0
+  var i,p,q,nm,test,num, student, min,max, reply, errors='',args=MM_validateForm.arguments;
+ 
+ 
+ // reply = 'Bedankt '+  'Oswald'  + ', je gegevens worden opgeslagen';
+ // alert(reply);
+  for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=MM_findObj(args[i]);
+    if (val) { nm=val.name; if (nm == 'naam') student = val.value; if ((val=val.value)!="") {
+      if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+        if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+      } else if (test!='R') { num = parseFloat(val);
+        if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+        if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+          min=test.substring(8,p); max=test.substring(p+1);
+          if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+    } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+  }
+  if (errors == '') reply =  'Bedankt '+  student  + ', je gegevens worden opgeslagen'
+  else reply = 'The following error(s) occurred:\n'+errors;
+  alert( reply);
+  document.MM_returnValue = (errors == ''); 
+ 
+}
+//-->
+</SCRIPT>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.style1 {color: #162CC2}
+.style3 {color: #FF0000}
+.style11 {
+	color: #000000;
+	font-style: italic;
+}
+.style13 {color: #FF0000; font-size: 24px; }
+.style14 {font-family: "Times New Roman", Times, serif}
+-->
+</style>
+
+
+
+</head>
+
+<body>
+
+<form name="aanmelding" method="post" action="">
+  <table width="100%" height="80%" border="0" cellpadding="2">
+    <tr bgcolor="#FFFFFF">
+      <td colspan="4" align="left" valign="middle"><h1 align="center"><span class="style1"><u><u><u><u><u><img src="uvslogo.bmp" width="80" height="80" align="left"></u></u></u></u></u><span class="style14">Anton de Kom Universiteit van Suriname</span></span></h1>
+      <h1 align="center"><span class="style13">Aanmelding eerstejaars studenten</span></h1>
+      <p><strong>velden die verplicht ingevuld dienen te worden zijn aangegeven met: </strong><span class="style3">*** </span></p>
+      <p>&nbsp;</p></td>
+    </tr>
+    <tr>
+      <td width="238" align="left" valign="middle"><i>Idnummer<span class="style3">***</span></i></td>
+      <td width="268" align="left" valign="top">
+        <div align="left">
+          <input name="idnummer" type="text" value="" size="20" maxlength="20">
+      </div></td>
+      <td width="150" align="left" valign="middle"><em>Woonplaats<i><span class="style3">***</span></i></em></td>
+      <td width="325" align="left" valign="top">
+        <input name="woonplaats" type="text" size="40" maxlength="50">
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle"><i>Naam<span class="style3">***</span></i></td>
+      <td align="left" valign="top">
+        <input name="naam" type="text" size="40" maxlength="50">
+      </td>
+      <td align="left" valign="middle"><em>District<i><span class="style3">***</span></i></em></td>
+      <td align="left" valign="top">
+        <input name="district" type="text" size="40" maxlength="50">
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle"><i>Voornaam<span class="style3">***</span></i></td>
+      <td align="left" valign="top">
+        <input name="voornaam" type="text" size="40" maxlength="50">
+      </td>
+      <td align="left" valign="middle"><em>Wijk</em></td>
+      <td align="left" valign="top">
+        <input name="wijk" type="text" size="40" maxlength="50">
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle"><i>Tweede voornaam</i></td>
+      <td height="32" align="left" valign="top">
+        <input name="tweedevoornaam" type="text" size="40" maxlength="50"></td>
+      <td align="left" valign="middle"><em>Straat<i><span class="style3">***</span></i></em></td>
+      <td align="left" valign="top">
+        <input name="straat" type="text" size="40" maxlength="50">
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="4" align="left" valign="middle"><i>        Burgelijke staat<span class="style3">***</span>        <table width="238" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000">
+          <tr>
+            <td width="118"><input name="burgelijkestaat" type="radio" value="ongehuwd" checked>
+            Ongehuwd</td>
+            <td width="114"><input type="radio" name="burgelijkestaat" value="concubinaat">
+            Concubinaat</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="burgelijkestaat" value="gehuwd">
+            Gehuwd</td>
+            <td><label>
+              <input type="radio" name="burgelijkestaat" value="weduwnaar">
+            Weduwnaar </label></td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="burgelijkestaat" value="gescheiden">
+            Gescheiden</td>
+            <td><label>
+              <input type="radio" name="burgelijkestaat" value="weduwe">
+            Weduwe </label></td>
+          </tr>
+        </table>
+      </i></td>
+      <td rowspan="4" align="center" valign="middle" bordercolor="#161616" bgcolor="#FFFFFF">      <span class="style11"> Geslacht</span> <span class="style3">***        
+        </span>        <table width="58" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000">
+          <tr>
+            <td width="50"><input name="geslacht" type="radio" class="style3" value="m">
+      M</td>
+          </tr>
+          <tr>
+            <td height="21"><input name="geslacht" type="radio" value="v" checked>
+      V</td>
+          </tr>
+                </table>        
+        <p>&nbsp;</p>
+      <td align="left" valign="middle"><em>Huisnummer of lokatie<i><span class="style3">***</span></i> </em></td>
+      <td align="left" valign="top">
+        <input name="huisnummer" type="text" size="40" maxlength="50">
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle"><em>Telefoon<i><span class="style3">***</span></i></em></td>
+      <td height="25" align="left" valign="top">
+        <input name="telefoon1" type="text" size="40" maxlength="50">
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle"><em>Telefoon 2 </em></td>
+      <td align="left" valign="top">
+        <input name="telefoon2" type="text" size="40" maxlength="50">
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle"><em>Telefoon werk </em></td>
+      <td align="left" valign="top">
+        <input name="telefoonwerk" type="text" size="40" maxlength="50">
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle"><i>Gehuwde naam</i></td>
+      <td align="left" valign="top" bordercolor="#161616" bgcolor="#FFFFFF"><input name="gehuwdenaam" type="text" size="40" maxlength="50">      
+      <td align="left" valign="middle"><em>Extentie telefoon werk </em></td>
+      <td align="left" valign="top">
+        <input name="extentiewerk" type="text" size="40" maxlength="50">
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle"><i>Nationaliteit<span class="style3">***</span></i></td>
+      <td align="left" valign="top"><select name="nationaliteit" size="1">
+        <option value="1">Surinaamse</option>
+      </select></td>
+      <td align="left" valign="middle"><em>Telefoon contactpersoon </em></td>
+      <td height="41" align="left" valign="top">
+        <input name="telefooncontact" type="text" size="40" maxlength="50">
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle"><i>Land van Geboorte<span class="style3">***</span></i></td>
+      <td align="left" valign="top"><input name="geboorteland" type="text" size="40" maxlength="50"></td>
+      <td align="left" valign="middle"><em>Email #1 </em></td>
+      <td height="35" align="left" valign="top">
+        <input name="email1" type="text" size="40" maxlength="50">
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle"><i>Geboorteplaats<span class="style3">***</span></i></td>
+      <td align="left" valign="top"><input name="geboorteplaats" type="text" size="40" maxlength="50">
+      </td>
+      <td align="left" valign="middle"><em>Email #2 </em></td>
+      <td align="left" valign="top">
+        <input name="email2" type="text" size="40" maxlength="50">
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle"><i><em>Geboortedatum<i><span class="style3">***</span></i></em></i></td>
+      <td align="left" valign="top">jaar
+        <select name="jaar">
+          <option value="1950">1950</option>
+          <option value="1951">1951</option>
+          <option value="2001">2001</option>
+        </select>
+        maand 
+        <select name="dag">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select> 
+        dag
+        <select name="maand" size="1">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+</td>
+      <td align="left" valign="middle"><em>Nummer bankrekening</em></td>
+      <td align="left" valign="top">
+        <input name="bankrekeningnummer" type="text" size="40" maxlength="50">
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle"><em><i>Geloof</i></em></td>
+      <td align="left" valign="top"><input name="geloof" type="text" size="40" maxlength="50"></td>
+      <td align="left" valign="middle"><em>Bank</em></td>
+      <td align="left" valign="top">
+        <input name="bank" type="text" size="40" maxlength="50">
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle"><i>Vooropleiding<span class="style3">***</span></i></td>
+      <td align="left" valign="top"><select name="vooropleiding" size="1">
+        <option value="VWO">VWO</option>
+      </select>
+      </td>
+      <td rowspan="2" align="left" valign="middle"><em>Hobbies</em></td>
+      <td rowspan="2" align="left" valign="top">
+        <textarea name="hobbies" cols="40" rows="2"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle"><i>Bevolkingsgroep</i></td>
+      <td align="left" valign="top"><select name="bevolkingsgroep" size="1">
+      </select>
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;
+      </td>
+      <td rowspan="2" align="left" valign="middle"><i>
+        <input name="cancelbutton" type="reset" value="Cancel">
+        <input name="okbutton" type="submit" class="style1" onClick="MM_validateForm('idnummer','','R','woonplaats','','R','naam','','R','district','','R','voornaam','','R','straat','','R','huisnummer','','R','telefoon1','','R','geboorteland','','R','geboorteplaats','','R');return document.MM_returnValue" value="OK">
+</i></td>
+      <td rowspan="2">&nbsp; </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="32"><i>&nbsp;      </i><i> </i></td>
+      <td><i></i></td>
+      <td><i>
+      </i></td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+  <p align="center"><u></u></p>
+</form>
+</body>
+</html>

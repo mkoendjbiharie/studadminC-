@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="sas.exe"/>
+    <OBJFILES value="Sas.obj Splash.obj Login.obj Main.obj sasdm.obj Person.obj Facstud.obj 
+      Schakelstud.obj Herinschrijving.obj Facstudafschr.obj Schstudafschr.obj 
+      saslib.obj Vooropleiding.obj Bevolkingsgroep.obj kaartnaam.obj kaartid.obj 
+      kaartrichting.obj kleurstudentenkaart.obj inschrijving_fac.obj 
+      studentenkaart.obj inschrijvingenfaculteit.obj Nationaliteit.obj 
+      Facnainschrijving.obj afschrijving_fac.obj CertFacStud.obj CertSchStud.obj 
+      Vooraanmelding.obj StudentFuncties.obj Studentvacatures.obj 
+      Studentdeclaraties.obj Studentvooraanmeld.obj wachtwoord.obj Functie.obj 
+      Certificaat.obj schakelreps.obj tutorial.obj about.obj kaartbatch.obj 
+      schakelstudentenkaart.obj herinschrijving_fac.obj graad.obj 
+      studierichting.obj sasbasictablesmod.obj intekenen.obj resultaten.obj"/>
+    <RESFILES value="Sas.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) Splash.dfm Login.dfm Main.dfm sasdm.dfm Person.dfm Facstud.dfm 
+      Schakelstud.dfm Herinschrijving.dfm Facstudafschr.dfm Schstudafschr.dfm 
+      Vooropleiding.dfm Bevolkingsgroep.dfm kaartnaam.dfm kaartid.dfm 
+      kaartrichting.dfm kleurstudentenkaart.dfm inschrijving_fac.dfm 
+      studentenkaart.dfm inschrijvingenfaculteit.dfm Nationaliteit.dfm 
+      Facnainschrijving.dfm afschrijving_fac.dfm CertFacStud.dfm CertSchStud.dfm 
+      Vooraanmelding.dfm StudentFuncties.dfm Studentvacatures.dfm 
+      Studentdeclaraties.dfm Studentvooraanmeld.dfm wachtwoord.dfm Functie.dfm 
+      Certificaat.dfm schakelreps.dfm tutorial.dfm about.dfm kaartbatch.dfm 
+      schakelstudentenkaart.dfm herinschrijving_fac.dfm graad.dfm 
+      studierichting.dfm sasbasictablesmod.dfm intekenen.dfm resultaten.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="bcb97axserver.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib dbrtl.lib dsnap.lib dbexpress.lib vcldb.lib qrpt.lib 
+      vclx.lib bdertl.lib bcbsmp.lib bcb2kaxserver.lib bcb97axserver.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
+      vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi bdecds.bpi qrpt.bpi teeui.bpi 
+      teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
+      dsnapcrba.bpi dsnapcon.bpi bcbsmp.bpi vclie.bpi xmlrtl.bpi inet.bpi 
+      inetdbbde.bpi inetdbxpress.bpi inetdb.bpi nmfast.bpi webdsnap.bpi 
+      bcbie.bpi websnap.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      indy.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="Sas.cpp"/>
+    <INCLUDEPATH value="&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;&quot;C:\Documents and Settings\oswald elmont\Mijn documenten\werk\Adek&quot;;&quot;D:\Program Files\Borland\CBuilder6\Projects&quot;;..;$(BCB)\include;$(BCB)\include\vcl;D:\winston\projects\sas\sas;C:\TEMP\SAS"/>
+    <LIBPATH value="&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;&quot;C:\Documents and Settings\oswald elmont\Mijn documenten\werk\Adek&quot;;&quot;D:\Program Files\Borland\CBuilder6\Projects&quot;;..;$(BCB)\lib\obj;$(BCB)\lib;D:\winston\projects\sas\sas;C:\TEMP\SAS"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I&quot;C:\Program Files\Borland\CBuilder6\Projects&quot; 
+      -I&quot;C:\Documents and Settings\oswald elmont\Mijn documenten\werk\Adek&quot; 
+      -I&quot;D:\Program Files\Borland\CBuilder6\Projects&quot; -I.. -I$(BCB)\include 
+      -I$(BCB)\include\vcl -ID:\winston\projects\sas\sas -IC:\TEMP\SAS 
+      -src_suffix cpp -boa"/>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -5 -b- -k- -vi -c -tW -tWM"/>
+    <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="Sas.res" FORMNAME="" UNITNAME="Sas.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Sas.cpp" FORMNAME="" UNITNAME="Sas" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Splash.cpp" FORMNAME="SplashForm" UNITNAME="Splash" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Login.cpp" FORMNAME="LoginForm" UNITNAME="Login" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Main.cpp" FORMNAME="HoofdScherm" UNITNAME="Main" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="sasdm.cpp" FORMNAME="sasDataModule" UNITNAME="sasdm" CONTAINERID="CCompiler" DESIGNCLASS="TDataModule" LOCALCOMMAND=""/>
+      <FILE FILENAME="Person.cpp" FORMNAME="PersonForm" UNITNAME="Person" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Facstud.cpp" FORMNAME="Faculteitstudent" UNITNAME="Facstud" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Schakelstud.cpp" FORMNAME="Schakelstudent" UNITNAME="Schakelstud" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Herinschrijving.cpp" FORMNAME="HerinschrijvingForm" UNITNAME="Herinschrijving" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Facstudafschr.cpp" FORMNAME="FacStudAfschrijvingForm" UNITNAME="Facstudafschr" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Schstudafschr.cpp" FORMNAME="SchStudAfschrijvingForm" UNITNAME="Schstudafschr" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="saslib.cpp" FORMNAME="" UNITNAME="saslib" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Vooropleiding.cpp" FORMNAME="VooropleidingForm" UNITNAME="Vooropleiding" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bevolkingsgroep.cpp" FORMNAME="BevolkingsgroepForm" UNITNAME="Bevolkingsgroep" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="kaartnaam.cpp" FORMNAME="KaartNaamDlg" UNITNAME="kaartnaam" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="kaartid.cpp" FORMNAME="KaartIdDlg" UNITNAME="kaartid" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="kaartrichting.cpp" FORMNAME="KaartRichtingDlg" UNITNAME="kaartrichting" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="kleurstudentenkaart.cpp" FORMNAME="KleurStudentenkaartForm" UNITNAME="kleurstudentenkaart" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="inschrijving_fac.cpp" FORMNAME="InschrijvingfaculteitForm" UNITNAME="inschrijving_fac" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="studentenkaart.cpp" FORMNAME="studentenkaartenreport" UNITNAME="studentenkaart" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="inschrijvingenfaculteit.cpp" FORMNAME="inschrijvingenfaculteitreport" UNITNAME="inschrijvingenfaculteit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SAS\Nationaliteit.dfm" FORMNAME="" UNITNAME="Nationaliteit.dfm" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SAS\Nationaliteit.h" FORMNAME="" UNITNAME="Nationaliteit.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Nationaliteit.cpp" FORMNAME="NationaliteitForm" UNITNAME="Nationaliteit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Facnainschrijving.cpp" FORMNAME="Facnainschr" UNITNAME="Facnainschrijving" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="afschrijving_fac.cpp" FORMNAME="AfschrijvingfaculteitForm" UNITNAME="afschrijving_fac" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CertFacStud.cpp" FORMNAME="Certificatenfaculteitstudent" UNITNAME="CertFacStud" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CertSchStud.cpp" FORMNAME="CertificaatSchakelStudent" UNITNAME="CertSchStud" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Vooraanmelding.cpp" FORMNAME="VooraanmeldingForm" UNITNAME="Vooraanmelding" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="StudentFuncties.cpp" FORMNAME="StudentfunctiesForm" UNITNAME="StudentFuncties" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Studentvacatures.cpp" FORMNAME="StudentVacaturesForm" UNITNAME="Studentvacatures" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Studentdeclaraties.cpp" FORMNAME="StudentdeclaratiesForm" UNITNAME="Studentdeclaraties" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Studentvooraanmeld.cpp" FORMNAME="StudentvooraanmeldForm" UNITNAME="Studentvooraanmeld" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="wachtwoord.cpp" FORMNAME="WachtwoordForm" UNITNAME="wachtwoord" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Functie.cpp" FORMNAME="FunctieForm" UNITNAME="Functie" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Certificaat.cpp" FORMNAME="CertificaatForm" UNITNAME="Certificaat" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="schakelreps.cpp" FORMNAME="schakelrepsForm" UNITNAME="schakelreps" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="tutorial.cpp" FORMNAME="TutorialForm" UNITNAME="tutorial" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="about.cpp" FORMNAME="AboutBox" UNITNAME="about" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="kaartbatch.cpp" FORMNAME="KaartBatchDlg" UNITNAME="kaartbatch" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="schakelstudentenkaart.cpp" FORMNAME="schakelstudentenkaartenreport" UNITNAME="schakelstudentenkaart" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="herinschrijving_fac.cpp" FORMNAME="HerinschrijvingfaculteitForm" UNITNAME="herinschrijving_fac" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="graad.cpp" FORMNAME="GraadForm" UNITNAME="graad" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="studierichting.cpp" FORMNAME="StudierichtingForm" UNITNAME="studierichting" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="sasbasictablesmod.cpp" FORMNAME="SasBasicTables" UNITNAME="sasbasictablesmod" CONTAINERID="CCompiler" DESIGNCLASS="TDataModule" LOCALCOMMAND=""/>
+      <FILE FILENAME="constant.h" FORMNAME="" UNITNAME="constant.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="intekenen.cpp" FORMNAME="IntekenForm" UNITNAME="intekenen" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="resultaten.cpp" FORMNAME="ResultatenForm" UNITNAME="resultaten" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=ADEK
+FileDescription=studentenadministratie
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=9
+Item0=C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\oswald elmont\Mijn documenten\werk\Adek;D:\Program Files\Borland\CBuilder6\Projects;..;$(BCB)\include;$(BCB)\include\vcl;D:\winston\projects\sas\sas;C:\TEMP\SAS
+Item1=C:\Documents and Settings\oswald elmont\Mijn documenten\werk\Adek;D:\Program Files\Borland\CBuilder6\Projects;..;$(BCB)\include;$(BCB)\include\vcl;D:\winston\projects\sas\sas;C:\TEMP\SAS
+Item2=D:\Program Files\Borland\CBuilder6\Projects;..;$(BCB)\include;$(BCB)\include\vcl;D:\winston\projects\sas\sas;C:\TEMP\SAS
+Item3=C:\TEMP\SAS;D:\Program Files\Borland\CBuilder6\Projects;..;$(BCB)\include;$(BCB)\include\vcl;D:\winston\projects\sas\sas
+Item4=D:\Program Files\Borland\CBuilder6\Projects;..;$(BCB)\include;$(BCB)\include\vcl;D:\winston\projects\sas\sas
+Item5=..;$(BCB)\include;$(BCB)\include\vcl;D:\winston\projects\sas\sas
+Item6=..;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Borland\CBuilder6\Projects\sas
+Item7=..;sas;$(BCB)\include;$(BCB)\include\vcl
+Item8=..\;sas;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=10
+Item0=C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\oswald elmont\Mijn documenten\werk\Adek;D:\Program Files\Borland\CBuilder6\Projects;..;$(BCB)\lib\obj;$(BCB)\lib;D:\winston\projects\sas\sas;C:\TEMP\SAS
+Item1=C:\Documents and Settings\oswald elmont\Mijn documenten\werk\Adek;D:\Program Files\Borland\CBuilder6\Projects;..;$(BCB)\lib\obj;$(BCB)\lib;D:\winston\projects\sas\sas;C:\TEMP\SAS
+Item2=D:\Program Files\Borland\CBuilder6\Projects;..;$(BCB)\lib\obj;$(BCB)\lib;D:\winston\projects\sas\sas;C:\TEMP\SAS
+Item3=C:\TEMP\SAS;D:\Program Files\Borland\CBuilder6\Projects;..;$(BCB)\lib\obj;$(BCB)\lib;D:\winston\projects\sas\sas
+Item4=D:\Program Files\Borland\CBuilder6\Projects;..;$(BCB)\lib\obj;$(BCB)\lib;D:\winston\projects\sas\sas
+Item5=..;$(BCB)\lib\obj;$(BCB)\lib;D:\winston\projects\sas\sas
+Item6=..;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Borland\CBuilder6\Projects\sas
+Item7=..;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Borland\CBuilder6\Projects\sas;C:\Program Files\MySQL\MySQL Server 4.1\lib\opt
+Item8=..;sas;$(BCB)\lib\obj;$(BCB)\lib
+Item9=..\;sas;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

@@ -1,0 +1,8 @@
+//CONSTANTEN VOOR MODUS
+
+# define READ  0
+# define ENTRY 1
+# define EDIT  2
+# define  DELETE 3
+# define   AFTERENTRY 4
+ 

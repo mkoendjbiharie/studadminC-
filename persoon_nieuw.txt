@@ -1,0 +1,33 @@
+mysql> desc persoon;
++-------------------+-------------+------+-----+---------+-------+
+| Field             | Type        | Null | Key | Default | Extra |
++-------------------+-------------+------+-----+---------+-------+
+| NATIO_ID          | int(11)     | YES  | MUL | NULL    |       |
+| BEV_ID            | int(11)     | YES  | MUL | NULL    |       |
+| GESLACHT          | char(1)     |      |     |         |       |
+| NAAM              | varchar(50) |      |     |         |       |
+| GEHUWDENAAM       | varchar(50) | YES  |     | NULL    |       |
+| VOORNAAM          | varchar(50) |      |     |         |       |
+| VOORNAAM2         | varchar(50) | YES  |     | NULL    |       |
+| BURGERLIJKE_STAAT | varchar(20) |      |     |         |       |
+| FOTO              | longblob    | YES  |     | NULL    |       |
+| OPMERKING         | text        | YES  |     | NULL    |       |
+| GEBOORTELAND      | varchar(20) | YES  |     | NULL    |       |
+| GEBOORTEPLAATS    | varchar(20) | YES  |     | NULL    |       |
+| BANK              | varchar(20) | YES  |     | NULL    |       |
+| DISTRICT          | varchar(20) | YES  |     | NULL    |       |
+| GELOOF            | varchar(20) | YES  |     | NULL    |       |
+| STRAAT            | varchar(50) | YES  |     | NULL    |       |
+| HUISNUMMER        | varchar(10) | YES  |     | NULL    |       |
+| EMAIL1            | varchar(50) | YES  |     | NULL    |       |
+| EMAIL2            | varchar(50) | YES  |     | NULL    |       |
+| GEBOORTEDATUM     | date        | YES  |     | NULL    |       |
+| BANKREKENINGNR    | varchar(20) | YES  |     | NULL    |       |
+| TELEFOON2         | varchar(20) | YES  |     | NULL    |       |
+| TELEFOON1         | varchar(20) | YES  |     | NULL    |       |
+| WOONPLAATS        | varchar(20) | YES  |     | NULL    |       |
+| WIJK              | varchar(20) | YES  |     | NULL    |       |
+| IDKAARTNR         | varchar(20) |      | PRI |         |       |
+| OPLEIDING_ID      | int(11)     | YES  |     | NULL    |       |
++-------------------+-------------+------+-----+---------+-------+
+27 rows in set (0.00 sec)

@@ -1,0 +1,9 @@
+The following code runs an insert query to add a record for Liechtenstein into the country table.
+
+SQLDataSet1->CommandType = ctQuery;
+
+SQLDataSet1->CommandText = "INSERT INTO COUNTRY (NAME, CAPITAL, POPULATION)  VALUES (:Name, :Capital, :Population) ";
+SQLDataSet1->Params->Items[0]->AsString = "Liechtenstein";
+SQLDataSet1->Params->Items[1]->AsString = "Vaduz";
+SQLDataSet1->Params->Items[2]->AsInteger = 420000;
+SQLDataSet1->ExecSQL();

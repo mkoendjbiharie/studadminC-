@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS `sas`.`maxnummers`;
+CREATE TABLE `maxnummers` (
+  `RICHTING` char(3) NOT NULL default '',
+  `JAAR` int(10) unsigned default NULL,
+  `NUMMER` int(10) unsigned default NULL,
+  PRIMARY KEY  (`RICHTING`)
+) TYPE=InnoDB;

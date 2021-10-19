@@ -1,0 +1,1 @@
+SELECT docentvak.* , faculteit.faculteit, vak.* FROM docentvak join vak on docentvak.docent_id = vak.vak_id join faculteit on vak.faculteit_id = faculteit.faculteit_id
